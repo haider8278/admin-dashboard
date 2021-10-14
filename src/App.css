@@ -49,6 +49,9 @@ body{
 .navigation ul li:hover{
   background: var(--white);
 }
+.navigation ul li.selected{
+  background: var(--white);
+}
 .navigation ul li:first-child{
   margin-bottom: 40px;
   pointer-events: none;
@@ -64,6 +67,7 @@ body{
 .navigation ul li:hover a{
   color: var(--blue);
 }
+
 .navigation ul li a .icon{
   position: relative;
   display: block;
@@ -363,6 +367,9 @@ body{
 }
 .recentCustomers table tr:hover td h4 span{
   color: var(--white);
+}
+.details.full-width{
+  grid-template-columns: 1fr;
 }
 
 /* responsive design starts here */

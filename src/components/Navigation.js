@@ -1,6 +1,7 @@
-import React from 'react';
+import { React } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog, faComment, faHome, faQuestion, faSignOutAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faCog, faComment, faHome, faSignOutAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = ({toggle}) => {
     console.log(toggle);
@@ -8,46 +9,46 @@ const Navigation = ({toggle}) => {
         <div className={`navigation ${toggle}`}>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <span className="icon"><FontAwesomeIcon icon={faUser} /></span>
                         <span className="title">Haider8278</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <NavLink to="/" activeClassName="selected">
                         <span className="icon"><FontAwesomeIcon icon={faHome} /></span>
                         <span className="title">Dashboard</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#">
+                    <NavLink to="/customers" activeClassName="selected">
                         <span className="icon"><FontAwesomeIcon icon={faUsers} /></span>
                         <span className="title">Customers</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#">
+                    <NavLink to="/orders" activeClassName="selected">
+                        <span className="icon"><FontAwesomeIcon icon={faCartPlus} /></span>
+                        <span className="title">Orders</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/messages" activeClassName="selected">
                         <span className="icon"><FontAwesomeIcon icon={faComment} /></span>
                         <span className="title">Messages</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#">
-                        <span className="icon"><FontAwesomeIcon icon={faQuestion} /></span>
-                        <span className="title">Help</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <NavLink to="/settings" activeClassName="selected">
                         <span className="icon"><FontAwesomeIcon icon={faCog} /></span>
                         <span className="title">Settings</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#">
+                    <NavLink to="/signout" activeClassName="selected">
                         <span className="icon"><FontAwesomeIcon icon={faSignOutAlt} /></span>
                         <span className="title">Signout</span>
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </div>

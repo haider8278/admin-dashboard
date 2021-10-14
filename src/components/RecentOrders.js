@@ -1,4 +1,4 @@
-import { React } from 'react';
+//import { React } from 'react';
 
 const RecentOrders = function ({ orders }) {
     const myOrders = orders.map((item, index) => {
