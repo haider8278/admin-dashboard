@@ -2,11 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faComment, faHome, faQuestion, faSignOutAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
 
-const Navigation = () => {
-
-
+const Navigation = ({toggle}) => {
+    console.log(toggle);
     return (
-        <div className="navigation">
+        <div className={`navigation ${toggle}`}>
             <ul>
                 <li>
                     <a href="#">
